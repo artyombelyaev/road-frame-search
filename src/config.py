@@ -24,3 +24,10 @@ N_TRAIN_SUB = 30_000
 
 ATTRS = ["weather", "scene", "timeofday"]
 UNDEFINED = "undefined"
+
+# Для каждого запроса выкидываем только кадры с undefined в его атрибутах: у 88% туннелей
+# погода undefined, общая галерея без undefined оставила бы от них 8 из 76.
+GALLERY = "per_query"
+# Запрос оставляем, если релевантных не меньше порога и в eval, и в train_sub.
+MIN_RELEVANT = 50
+QUERIES_PATH = ARTIFACTS / "queries.parquet"

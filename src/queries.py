@@ -6,7 +6,7 @@ import itertools
 import numpy as np
 import pandas as pd
 
-from . import config
+from . import config, data
 
 VALUES = {
     "weather": ["clear", "overcast", "partly cloudy", "rainy", "snowy", "foggy"],
@@ -61,3 +61,35 @@ def count_relevant(frames: pd.DataFrame, queries: pd.DataFrame, gallery: str) ->
     out["n_gallery"] = n_gal
     out["prevalence"] = out.n_relevant / out.n_gallery
     return out
+
+
+# Одна таблица на обе части: число релевантных и галерея в eval и в train_sub.
+def count_both(frames: pd.DataFrame, gallery: str = config.GALLERY) -> pd.DataFrame:
+    qs = all_queries()
+    out = qs.copy()
+    for part in ["eval", "train_sub"]:
+        c = count_relevant(frames[frames.part == part], qs, gallery)
+        for col in ["n_relevant", "n_gallery", "prevalence"]:
+            out[f"{col}_{part}"] = c[col].values
+    return out
+
+
+def select(counts: pd.DataFrame, min_relevant: int = config.MIN_RELEVANT) -> pd.DataFrame:
+    keep = (counts.n_relevant_eval >= min_relevant) & (counts.n_relevant_train_sub >= min_relevant)
+    return counts[keep].reset_index(drop=True)
+
+
+def load_queries() -> pd.DataFrame:
+    return pd.read_parquet(config.QUERIES_PATH)
+
+
+def main():
+    counts = count_both(data.load_frames())
+    counts.to_csv(config.RESULTS / "query_counts.csv", index=False)
+    chosen = select(counts)
+    chosen.to_parquet(config.QUERIES_PATH, index=False)
+    print(chosen.groupby("n_attrs").size().to_string())
+
+
+if __name__ == "__main__":
+    main()

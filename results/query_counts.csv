@@ -1,0 +1,196 @@
+query_id,n_attrs,weather,scene,timeofday,n_relevant_eval,n_gallery_eval,prevalence_eval,n_relevant_train_sub,n_gallery_train_sub,prevalence_train_sub
+weather=clear,1,clear,,,16102,26503,0.607553861826963,15983,26482,0.6035420285476928
+weather=overcast,1,overcast,,,3807,26503,0.14364411576047995,3798,26482,0.14341817083301867
+weather=partly cloudy,1,partly cloudy,,,2179,26503,0.08221710749726446,2173,26482,0.08205573597160336
+weather=rainy,1,rainy,,,2044,26503,0.07712334452703468,2158,26482,0.08148931349595952
+weather=snowy,1,snowy,,,2320,26503,0.08753725993283779,2306,26482,0.08707801525564535
+weather=foggy,1,foggy,,,51,26503,0.001924310455420141,64,26482,0.0024167358960803563
+scene=city street,1,,city street,,18400,29849,0.6164360615095983,18741,29853,0.6277761029042307
+scene=highway,1,,highway,,7568,29849,0.25354283225568697,7456,29853,0.24975714333567817
+scene=residential,1,,residential,,3635,29849,0.12177962410801031,3422,29853,0.11462834555991022
+scene=parking lot,1,,parking lot,,157,29849,0.005259807698750377,151,29853,0.005058118112082538
+scene=tunnel,1,,tunnel,,76,29849,0.002546148949713558,73,29853,0.0024453153786889088
+scene=gas stations,1,,gas stations,,13,29849,0.0004355254782404771,10,29853,0.0003349747094094396
+timeofday=daytime,1,,,daytime,15704,29923,0.5248136884670654,15820,29937,0.5284430637672446
+timeofday=night,1,,,night,11965,29923,0.3998596397420045,11991,29937,0.4005411363864115
+timeofday=dawn/dusk,1,,,dawn/dusk,2254,29923,0.07532667179093006,2126,29937,0.07101579984634399
+weather=clear|scene=city street,2,clear,city street,,9646,26385,0.3655865074853136,9745,26376,0.36946466484683044
+weather=clear|scene=highway,2,clear,highway,,4593,26385,0.174076179647527,4450,26376,0.16871398240824992
+weather=clear|scene=residential,2,clear,residential,,1718,26385,0.0651127534584044,1639,26376,0.06213982408249924
+weather=clear|scene=parking lot,2,clear,parking lot,,55,26385,0.0020845177184006065,67,26376,0.00254018804974219
+weather=clear|scene=tunnel,2,clear,tunnel,,6,26385,0.00022740193291642978,4,26376,0.00015165301789505612
+weather=clear|scene=gas stations,2,clear,gas stations,,6,26385,0.00022740193291642978,6,26376,0.00022747952684258417
+weather=overcast|scene=city street,2,overcast,city street,,2240,26385,0.08489672162213378,2250,26376,0.08530482256596907
+weather=overcast|scene=highway,2,overcast,highway,,1004,26385,0.03805192344134925,1001,26376,0.03795116772823779
+weather=overcast|scene=residential,2,overcast,residential,,533,26385,0.02020087170740951,518,26376,0.019639065817409766
+weather=overcast|scene=parking lot,2,overcast,parking lot,,24,26385,0.0009096077316657191,25,26376,0.0009478313618441007
+weather=overcast|scene=tunnel,2,overcast,tunnel,,0,26385,0.0,0,26376,0.0
+weather=overcast|scene=gas stations,2,overcast,gas stations,,3,26385,0.00011370096645821489,1,26376,3.791325447376403e-05
+weather=partly cloudy|scene=city street,2,partly cloudy,city street,,1104,26385,0.04184195565662308,1163,26376,0.04409311495298757
+weather=partly cloudy|scene=highway,2,partly cloudy,highway,,759,26385,0.028766344513928368,752,26376,0.02851076736427055
+weather=partly cloudy|scene=residential,2,partly cloudy,residential,,295,26385,0.011180595035057798,246,26376,0.00932666060054595
+weather=partly cloudy|scene=parking lot,2,partly cloudy,parking lot,,19,26385,0.0007201061209020276,12,26376,0.00045495905368516835
+weather=partly cloudy|scene=tunnel,2,partly cloudy,tunnel,,0,26385,0.0,0,26376,0.0
+weather=partly cloudy|scene=gas stations,2,partly cloudy,gas stations,,1,26385,3.7900322152738296e-05,0,26376,0.0
+weather=rainy|scene=city street,2,rainy,city street,,1323,26385,0.05014212620807277,1450,26376,0.05497421898695784
+weather=rainy|scene=highway,2,rainy,highway,,481,26385,0.01823005495546712,465,26376,0.017629663330300274
+weather=rainy|scene=residential,2,rainy,residential,,196,26385,0.007428463141936706,202,26376,0.007658477403700334
+weather=rainy|scene=parking lot,2,rainy,parking lot,,12,26385,0.00045480386583285955,10,26376,0.00037913254473764026
+weather=rainy|scene=tunnel,2,rainy,tunnel,,3,26385,0.00011370096645821489,5,26376,0.00018956627236882013
+weather=rainy|scene=gas stations,2,rainy,gas stations,,1,26385,3.7900322152738296e-05,2,26376,7.582650894752806e-05
+weather=snowy|scene=city street,2,snowy,city street,,1644,26385,0.06230812961910176,1685,26376,0.06388383378829239
+weather=snowy|scene=highway,2,snowy,highway,,308,26385,0.011673299223043396,295,26376,0.011184410069760389
+weather=snowy|scene=residential,2,snowy,residential,,339,26385,0.012848209209778283,309,26376,0.011715195632393085
+weather=snowy|scene=parking lot,2,snowy,parking lot,,22,26385,0.0008338070873602425,10,26376,0.00037913254473764026
+weather=snowy|scene=tunnel,2,snowy,tunnel,,0,26385,0.0,0,26376,0.0
+weather=snowy|scene=gas stations,2,snowy,gas stations,,1,26385,3.7900322152738296e-05,0,26376,0.0
+weather=foggy|scene=city street,2,foggy,city street,,26,26385,0.0009854083759711957,26,26376,0.0009857446163178648
+weather=foggy|scene=highway,2,foggy,highway,,16,26385,0.0006064051544438127,24,26376,0.0009099181073703367
+weather=foggy|scene=residential,2,foggy,residential,,7,26385,0.0002653022550691681,13,26376,0.0004928723081589324
+weather=foggy|scene=parking lot,2,foggy,parking lot,,0,26385,0.0,1,26376,3.791325447376403e-05
+weather=foggy|scene=tunnel,2,foggy,tunnel,,0,26385,0.0,0,26376,0.0
+weather=foggy|scene=gas stations,2,foggy,gas stations,,0,26385,0.0,0,26376,0.0
+weather=clear|timeofday=daytime,2,clear,,daytime,5336,26498,0.20137368858027022,5281,26476,0.1994636652062245
+weather=clear|timeofday=night,2,clear,,night,9892,26498,0.37331119329760737,9865,26476,0.37260160145037013
+weather=clear|timeofday=dawn/dusk,2,clear,,dawn/dusk,872,26498,0.032908144010868744,836,26476,0.03157576673213476
+weather=overcast|timeofday=daytime,2,overcast,,daytime,3202,26498,0.1208393086270662,3266,26476,0.12335700256836381
+weather=overcast|timeofday=night,2,overcast,,night,46,26498,0.0017359800739678466,38,26476,0.0014352621241879439
+weather=overcast|timeofday=dawn/dusk,2,overcast,,dawn/dusk,559,26498,0.021095931768435355,494,26476,0.01865840761444327
+weather=partly cloudy|timeofday=daytime,2,partly cloudy,,daytime,1905,26498,0.07189221828062495,1892,26476,0.07146094576219973
+weather=partly cloudy|timeofday=night,2,partly cloudy,,night,12,26498,0.00045286436712204693,23,26476,0.0008687112856927029
+weather=partly cloudy|timeofday=dawn/dusk,2,partly cloudy,,dawn/dusk,262,26498,0.009887538682164692,258,26476,0.009744674422118144
+weather=rainy|timeofday=daytime,2,rainy,,daytime,1010,26498,0.03811608423277228,1115,26476,0.04211361232814625
+weather=rainy|timeofday=night,2,rainy,,night,889,26498,0.033549701864291646,895,26476,0.033804200030216044
+weather=rainy|timeofday=dawn/dusk,2,rainy,,dawn/dusk,143,26498,0.005396633708204393,144,26476,0.005438888049554313
+weather=snowy|timeofday=daytime,2,snowy,,daytime,1212,26498,0.04573930107932674,1193,26476,0.0450596766883215
+weather=snowy|timeofday=night,2,snowy,,night,904,26498,0.034115782323194205,941,26476,0.03554162260160145
+weather=snowy|timeofday=dawn/dusk,2,snowy,,dawn/dusk,203,26498,0.0076609555438146276,171,26476,0.006458679558845747
+weather=foggy|timeofday=daytime,2,foggy,,daytime,20,26498,0.0007547739452034116,25,26476,0.0009442513974920682
+weather=foggy|timeofday=night,2,foggy,,night,26,26498,0.000981206128764435,31,26476,0.0011708717328901648
+weather=foggy|timeofday=dawn/dusk,2,foggy,,dawn/dusk,5,26498,0.0001886934863008529,8,26476,0.00030216044719746184
+scene=city street|timeofday=daytime,2,,city street,daytime,9219,29780,0.3095701813297515,9495,29795,0.3186776304749119
+scene=city street|timeofday=night,2,,city street,night,7837,29780,0.26316319677635996,7990,29795,0.26816579963081055
+scene=city street|timeofday=dawn/dusk,2,,city street,dawn/dusk,1342,29780,0.04506380120886501,1254,29795,0.04208759859036751
+scene=highway|timeofday=daytime,2,,highway,daytime,3842,29780,0.129012760241773,3792,29795,0.12726967612015438
+scene=highway|timeofday=night,2,,highway,night,3114,29780,0.1045668233713902,3047,29795,0.10226548078536667
+scene=highway|timeofday=dawn/dusk,2,,highway,dawn/dusk,609,29780,0.020449966420416386,613,29795,0.020573921798959557
+scene=residential|timeofday=daytime,2,,residential,daytime,2500,29780,0.08394895903290799,2394,29795,0.08034905185433798
+scene=residential|timeofday=night,2,,residential,night,845,29780,0.0283747481531229,785,29795,0.026346702466856855
+scene=residential|timeofday=dawn/dusk,2,,residential,dawn/dusk,289,29780,0.009704499664204164,243,29795,0.00815573082732002
+scene=parking lot|timeofday=daytime,2,,parking lot,daytime,101,29780,0.0033915379449294828,86,29795,0.002886390333948649
+scene=parking lot|timeofday=night,2,,parking lot,night,40,29780,0.001343183344526528,40,29795,0.0013425071320691392
+scene=parking lot|timeofday=dawn/dusk,2,,parking lot,dawn/dusk,8,29780,0.0002686366689053056,12,29795,0.00040275213962074176
+scene=tunnel|timeofday=daytime,2,,tunnel,daytime,12,29780,0.00040295500335795837,20,29795,0.0006712535660345696
+scene=tunnel|timeofday=night,2,,tunnel,night,9,29780,0.00030221625251846876,13,29795,0.0004363148179224702
+scene=tunnel|timeofday=dawn/dusk,2,,tunnel,dawn/dusk,0,29780,0.0,1,29795,3.356267830172848e-05
+scene=gas stations|timeofday=daytime,2,,gas stations,daytime,5,29780,0.000167897918065816,7,29795,0.00023493874811209933
+scene=gas stations|timeofday=night,2,,gas stations,night,6,29780,0.00020147750167897918,2,29795,6.712535660345696e-05
+scene=gas stations|timeofday=dawn/dusk,2,,gas stations,dawn/dusk,2,29780,6.71591672263264e-05,1,29795,3.356267830172848e-05
+weather=clear|scene=city street|timeofday=daytime,3,clear,city street,daytime,2783,26383,0.1054845923511352,2851,26372,0.10810708327013499
+weather=clear|scene=city street|timeofday=night,3,clear,city street,night,6390,26383,0.24220141757950195,6461,26372,0.24499469133929927
+weather=clear|scene=city street|timeofday=dawn/dusk,3,clear,city street,dawn/dusk,473,26383,0.017928211348216656,433,26372,0.01641892916729865
+weather=clear|scene=highway|timeofday=daytime,3,clear,highway,daytime,1600,26383,0.06064511238297388,1493,26372,0.05661307447292583
+weather=clear|scene=highway|timeofday=night,3,clear,highway,night,2719,26383,0.10305878785581625,2667,26372,0.1011299863491582
+weather=clear|scene=highway|timeofday=dawn/dusk,3,clear,highway,dawn/dusk,273,26383,0.010347572300344918,290,26372,0.010996511451539511
+weather=clear|scene=residential|timeofday=daytime,3,clear,residential,daytime,921,26383,0.03490884281544934,900,26372,0.034127104504777794
+weather=clear|scene=residential|timeofday=night,3,clear,residential,night,676,26383,0.025622559981806466,633,26372,0.02400273016836038
+weather=clear|scene=residential|timeofday=dawn/dusk,3,clear,residential,dawn/dusk,121,26383,0.0045862866239624,106,26372,0.004019414530562718
+weather=clear|scene=parking lot|timeofday=daytime,3,clear,parking lot,daytime,22,26383,0.000833870295265891,28,26372,0.0010617321401486426
+weather=clear|scene=parking lot|timeofday=night,3,clear,parking lot,night,29,26383,0.0010991926619414016,33,26372,0.0012513271651751858
+weather=clear|scene=parking lot|timeofday=dawn/dusk,3,clear,parking lot,dawn/dusk,4,26383,0.0001516127809574347,5,26372,0.00018959502502654331
+weather=clear|scene=tunnel|timeofday=daytime,3,clear,tunnel,daytime,2,26383,7.580639047871735e-05,0,26372,0.0
+weather=clear|scene=tunnel|timeofday=night,3,clear,tunnel,night,4,26383,0.0001516127809574347,3,26372,0.00011375701501592598
+weather=clear|scene=tunnel|timeofday=dawn/dusk,3,clear,tunnel,dawn/dusk,0,26383,0.0,1,26372,3.791900500530866e-05
+weather=clear|scene=gas stations|timeofday=daytime,3,clear,gas stations,daytime,1,26383,3.7903195239358676e-05,3,26372,0.00011375701501592598
+weather=clear|scene=gas stations|timeofday=night,3,clear,gas stations,night,5,26383,0.0001895159761967934,2,26372,7.583801001061732e-05
+weather=clear|scene=gas stations|timeofday=dawn/dusk,3,clear,gas stations,dawn/dusk,0,26383,0.0,1,26372,3.791900500530866e-05
+weather=overcast|scene=city street|timeofday=daytime,3,overcast,city street,daytime,1882,26383,0.07133381344047303,1939,26372,0.0735249507052935
+weather=overcast|scene=city street|timeofday=night,3,overcast,city street,night,27,26383,0.0010233862714626844,20,26372,0.0007583801001061733
+weather=overcast|scene=city street|timeofday=dawn/dusk,3,overcast,city street,dawn/dusk,331,26383,0.012545957624227722,291,26372,0.01103443045654482
+weather=overcast|scene=highway|timeofday=daytime,3,overcast,highway,daytime,826,26383,0.031308039267710266,840,26372,0.03185196420445927
+weather=overcast|scene=highway|timeofday=night,3,overcast,highway,night,12,26383,0.0004548383428723041,16,26372,0.0006067040800849386
+weather=overcast|scene=highway|timeofday=dawn/dusk,3,overcast,highway,dawn/dusk,166,26383,0.006291930409733541,145,26372,0.0054982557257697556
+weather=overcast|scene=residential|timeofday=daytime,3,overcast,residential,daytime,467,26383,0.017700792176780503,461,26372,0.01748066130744729
+weather=overcast|scene=residential|timeofday=night,3,overcast,residential,night,7,26383,0.0002653223666755107,2,26372,7.583801001061732e-05
+weather=overcast|scene=residential|timeofday=dawn/dusk,3,overcast,residential,dawn/dusk,59,26383,0.002236288519122162,55,26372,0.002085545275291976
+weather=overcast|scene=parking lot|timeofday=daytime,3,overcast,parking lot,daytime,23,26383,0.0008717734905052495,23,26372,0.0008721371151220992
+weather=overcast|scene=parking lot|timeofday=night,3,overcast,parking lot,night,0,26383,0.0,0,26372,0.0
+weather=overcast|scene=parking lot|timeofday=dawn/dusk,3,overcast,parking lot,dawn/dusk,1,26383,3.7903195239358676e-05,2,26372,7.583801001061732e-05
+weather=overcast|scene=tunnel|timeofday=daytime,3,overcast,tunnel,daytime,0,26383,0.0,0,26372,0.0
+weather=overcast|scene=tunnel|timeofday=night,3,overcast,tunnel,night,0,26383,0.0,0,26372,0.0
+weather=overcast|scene=tunnel|timeofday=dawn/dusk,3,overcast,tunnel,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=overcast|scene=gas stations|timeofday=daytime,3,overcast,gas stations,daytime,2,26383,7.580639047871735e-05,1,26372,3.791900500530866e-05
+weather=overcast|scene=gas stations|timeofday=night,3,overcast,gas stations,night,0,26383,0.0,0,26372,0.0
+weather=overcast|scene=gas stations|timeofday=dawn/dusk,3,overcast,gas stations,dawn/dusk,1,26383,3.7903195239358676e-05,0,26372,0.0
+weather=partly cloudy|scene=city street|timeofday=daytime,3,partly cloudy,city street,daytime,958,26383,0.03631126103930561,1006,26372,0.03814651903534051
+weather=partly cloudy|scene=city street|timeofday=night,3,partly cloudy,city street,night,7,26383,0.0002653223666755107,13,26372,0.0004929470650690126
+weather=partly cloudy|scene=city street|timeofday=dawn/dusk,3,partly cloudy,city street,dawn/dusk,139,26383,0.005268544138270857,144,26372,0.005460336720764447
+weather=partly cloudy|scene=highway|timeofday=daytime,3,partly cloudy,highway,daytime,662,26383,0.025091915248455443,644,26372,0.02441983922341878
+weather=partly cloudy|scene=highway|timeofday=night,3,partly cloudy,highway,night,2,26383,7.580639047871735e-05,10,26372,0.00037919005005308663
+weather=partly cloudy|scene=highway|timeofday=dawn/dusk,3,partly cloudy,highway,dawn/dusk,95,26383,0.0036008035477390742,98,26372,0.0037160624905202486
+weather=partly cloudy|scene=residential|timeofday=daytime,3,partly cloudy,residential,daytime,267,26383,0.010120153128908767,230,26372,0.008721371151220993
+weather=partly cloudy|scene=residential|timeofday=night,3,partly cloudy,residential,night,2,26383,7.580639047871735e-05,0,26372,0.0
+weather=partly cloudy|scene=residential|timeofday=dawn/dusk,3,partly cloudy,residential,dawn/dusk,26,26383,0.0009854830762233257,16,26372,0.0006067040800849386
+weather=partly cloudy|scene=parking lot|timeofday=daytime,3,partly cloudy,parking lot,daytime,17,26383,0.0006443543190690975,12,26372,0.0004550280600637039
+weather=partly cloudy|scene=parking lot|timeofday=night,3,partly cloudy,parking lot,night,1,26383,3.7903195239358676e-05,0,26372,0.0
+weather=partly cloudy|scene=parking lot|timeofday=dawn/dusk,3,partly cloudy,parking lot,dawn/dusk,1,26383,3.7903195239358676e-05,0,26372,0.0
+weather=partly cloudy|scene=tunnel|timeofday=daytime,3,partly cloudy,tunnel,daytime,0,26383,0.0,0,26372,0.0
+weather=partly cloudy|scene=tunnel|timeofday=night,3,partly cloudy,tunnel,night,0,26383,0.0,0,26372,0.0
+weather=partly cloudy|scene=tunnel|timeofday=dawn/dusk,3,partly cloudy,tunnel,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=partly cloudy|scene=gas stations|timeofday=daytime,3,partly cloudy,gas stations,daytime,0,26383,0.0,0,26372,0.0
+weather=partly cloudy|scene=gas stations|timeofday=night,3,partly cloudy,gas stations,night,0,26383,0.0,0,26372,0.0
+weather=partly cloudy|scene=gas stations|timeofday=dawn/dusk,3,partly cloudy,gas stations,dawn/dusk,1,26383,3.7903195239358676e-05,0,26372,0.0
+weather=rainy|scene=city street|timeofday=daytime,3,rainy,city street,daytime,629,26383,0.023841109805556607,734,26372,0.027832549673896558
+weather=rainy|scene=city street|timeofday=night,3,rainy,city street,night,594,26383,0.022514497972179054,624,26372,0.023661459123312606
+weather=rainy|scene=city street|timeofday=dawn/dusk,3,rainy,city street,dawn/dusk,100,26383,0.0037903195239358677,92,26372,0.0034885484604883967
+weather=rainy|scene=highway|timeofday=daytime,3,rainy,highway,daytime,228,26383,0.008641928514573778,220,26372,0.008342181101167905
+weather=rainy|scene=highway|timeofday=night,3,rainy,highway,night,221,26383,0.008376606147898268,211,26372,0.008000910056120128
+weather=rainy|scene=highway|timeofday=dawn/dusk,3,rainy,highway,dawn/dusk,32,26383,0.0012129022476594776,34,26372,0.0012892461701804944
+weather=rainy|scene=residential|timeofday=daytime,3,rainy,residential,daytime,138,26383,0.0052306409430314975,144,26372,0.005460336720764447
+weather=rainy|scene=residential|timeofday=night,3,rainy,residential,night,48,26383,0.0018193533714892165,42,26372,0.0015925982102229638
+weather=rainy|scene=residential|timeofday=dawn/dusk,3,rainy,residential,dawn/dusk,10,26383,0.0003790319523935868,16,26372,0.0006067040800849386
+weather=rainy|scene=parking lot|timeofday=daytime,3,rainy,parking lot,daytime,10,26383,0.0003790319523935868,8,26372,0.0003033520400424693
+weather=rainy|scene=parking lot|timeofday=night,3,rainy,parking lot,night,2,26383,7.580639047871735e-05,1,26372,3.791900500530866e-05
+weather=rainy|scene=parking lot|timeofday=dawn/dusk,3,rainy,parking lot,dawn/dusk,0,26383,0.0,1,26372,3.791900500530866e-05
+weather=rainy|scene=tunnel|timeofday=daytime,3,rainy,tunnel,daytime,2,26383,7.580639047871735e-05,2,26372,7.583801001061732e-05
+weather=rainy|scene=tunnel|timeofday=night,3,rainy,tunnel,night,0,26383,0.0,1,26372,3.791900500530866e-05
+weather=rainy|scene=tunnel|timeofday=dawn/dusk,3,rainy,tunnel,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=rainy|scene=gas stations|timeofday=daytime,3,rainy,gas stations,daytime,1,26383,3.7903195239358676e-05,2,26372,7.583801001061732e-05
+weather=rainy|scene=gas stations|timeofday=night,3,rainy,gas stations,night,0,26383,0.0,0,26372,0.0
+weather=rainy|scene=gas stations|timeofday=dawn/dusk,3,rainy,gas stations,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=snowy|scene=city street|timeofday=daytime,3,snowy,city street,daytime,807,26383,0.030587878558162453,799,26372,0.03029728499924162
+weather=snowy|scene=city street|timeofday=night,3,snowy,city street,night,694,26383,0.02630481749611492,757,26372,0.028704686789018656
+weather=snowy|scene=city street|timeofday=dawn/dusk,3,snowy,city street,dawn/dusk,143,26383,0.005420156919228291,128,26372,0.004853632640679509
+weather=snowy|scene=highway|timeofday=daytime,3,snowy,highway,daytime,181,26383,0.006860478338323921,188,26372,0.007128772940998028
+weather=snowy|scene=highway|timeofday=night,3,snowy,highway,night,104,26383,0.003941932304893303,86,26372,0.003261034430456545
+weather=snowy|scene=highway|timeofday=dawn/dusk,3,snowy,highway,dawn/dusk,23,26383,0.0008717734905052495,21,26372,0.0007962991051114819
+weather=snowy|scene=residential|timeofday=daytime,3,snowy,residential,daytime,207,26383,0.007845961414547246,196,26372,0.007432124981040497
+weather=snowy|scene=residential|timeofday=night,3,snowy,residential,night,98,26383,0.0037145131334571503,92,26372,0.0034885484604883967
+weather=snowy|scene=residential|timeofday=dawn/dusk,3,snowy,residential,dawn/dusk,34,26383,0.001288708638138195,21,26372,0.0007962991051114819
+weather=snowy|scene=parking lot|timeofday=daytime,3,snowy,parking lot,daytime,16,26383,0.0006064511238297388,7,26372,0.00026543303503716065
+weather=snowy|scene=parking lot|timeofday=night,3,snowy,parking lot,night,4,26383,0.0001516127809574347,2,26372,7.583801001061732e-05
+weather=snowy|scene=parking lot|timeofday=dawn/dusk,3,snowy,parking lot,dawn/dusk,2,26383,7.580639047871735e-05,1,26372,3.791900500530866e-05
+weather=snowy|scene=tunnel|timeofday=daytime,3,snowy,tunnel,daytime,0,26383,0.0,0,26372,0.0
+weather=snowy|scene=tunnel|timeofday=night,3,snowy,tunnel,night,0,26383,0.0,0,26372,0.0
+weather=snowy|scene=tunnel|timeofday=dawn/dusk,3,snowy,tunnel,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=snowy|scene=gas stations|timeofday=daytime,3,snowy,gas stations,daytime,1,26383,3.7903195239358676e-05,0,26372,0.0
+weather=snowy|scene=gas stations|timeofday=night,3,snowy,gas stations,night,0,26383,0.0,0,26372,0.0
+weather=snowy|scene=gas stations|timeofday=dawn/dusk,3,snowy,gas stations,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=city street|timeofday=daytime,3,foggy,city street,daytime,6,26383,0.00022741917143615206,5,26372,0.00018959502502654331
+weather=foggy|scene=city street|timeofday=night,3,foggy,city street,night,16,26383,0.0006064511238297388,18,26372,0.0006825420900955559
+weather=foggy|scene=city street|timeofday=dawn/dusk,3,foggy,city street,dawn/dusk,4,26383,0.0001516127809574347,3,26372,0.00011375701501592598
+weather=foggy|scene=highway|timeofday=daytime,3,foggy,highway,daytime,8,26383,0.0003032255619148694,10,26372,0.00037919005005308663
+weather=foggy|scene=highway|timeofday=night,3,foggy,highway,night,8,26383,0.0003032255619148694,10,26372,0.00037919005005308663
+weather=foggy|scene=highway|timeofday=dawn/dusk,3,foggy,highway,dawn/dusk,0,26383,0.0,4,26372,0.00015167602002123465
+weather=foggy|scene=residential|timeofday=daytime,3,foggy,residential,daytime,5,26383,0.0001895159761967934,10,26372,0.00037919005005308663
+weather=foggy|scene=residential|timeofday=night,3,foggy,residential,night,1,26383,3.7903195239358676e-05,3,26372,0.00011375701501592598
+weather=foggy|scene=residential|timeofday=dawn/dusk,3,foggy,residential,dawn/dusk,1,26383,3.7903195239358676e-05,0,26372,0.0
+weather=foggy|scene=parking lot|timeofday=daytime,3,foggy,parking lot,daytime,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=parking lot|timeofday=night,3,foggy,parking lot,night,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=parking lot|timeofday=dawn/dusk,3,foggy,parking lot,dawn/dusk,0,26383,0.0,1,26372,3.791900500530866e-05
+weather=foggy|scene=tunnel|timeofday=daytime,3,foggy,tunnel,daytime,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=tunnel|timeofday=night,3,foggy,tunnel,night,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=tunnel|timeofday=dawn/dusk,3,foggy,tunnel,dawn/dusk,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=gas stations|timeofday=daytime,3,foggy,gas stations,daytime,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=gas stations|timeofday=night,3,foggy,gas stations,night,0,26383,0.0,0,26372,0.0
+weather=foggy|scene=gas stations|timeofday=dawn/dusk,3,foggy,gas stations,dawn/dusk,0,26383,0.0,0,26372,0.0
