@@ -31,3 +31,11 @@ GALLERY = "per_query"
 # Запрос оставляем, если релевантных не меньше порога и в eval, и в train_sub.
 MIN_RELEVANT = 50
 QUERIES_PATH = ARTIFACTS / "queries.parquet"
+
+CLIP_MODEL = "openai/clip-vit-base-patch32"
+CLIP_TAG = "clip_b32"
+# Эмбеддинги картинок из Colab кладём сюда.
+EMB_DIR = ARTIFACTS / "emb"
+# Масштаб логитов CLIP (обученная температура ViT-B/32 близка к 100), нужен для softmax по значениям атрибута.
+LOGIT_SCALE = 100.0
+KS = (10, 50)
