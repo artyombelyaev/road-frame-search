@@ -108,18 +108,49 @@ def run_variants(frames, qs, variants, model, processor) -> pd.DataFrame:
     return pd.concat(out, ignore_index=True)
 
 
+VARIANT = ["mode", "template", "scoring"]
+
+
+# Парный бутстрэп по запросам: запросы берутся с возвращением, оба варианта считаются на одной выборке.
+def paired_bootstrap(ap_a, ap_b, n_boot: int = config.N_BOOT, seed: int = config.SEED) -> tuple[float, float, float]:
+    diff = np.asarray(ap_a) - np.asarray(ap_b)
+    idx = np.random.default_rng(seed).integers(0, len(diff), size=(n_boot, len(diff)))
+    lo, hi = np.percentile(diff[idx].mean(axis=1), [2.5, 97.5])
+    return float(diff.mean()), float(lo), float(hi)
+
+
+# Разница mAP выбранного варианта со вторым и с вариантами, где изменён один фактор,
+# а два других остались как у выбранного.
+def bootstrap_comparisons(per_query: pd.DataFrame, table: pd.DataFrame) -> pd.DataFrame:
+    ap = per_query.pivot_table(index="query_id", columns=VARIANT, values="ap")
+    best, second = table.index[0], table.index[1]
+    pairs = [("1-й против 2-го", second)]
+    for i, factor in enumerate(VARIANT):
+        for level in sorted(set(ap.columns.get_level_values(i)) - {best[i]}):
+            pairs.append((factor, tuple(level if j == i else best[j] for j in range(len(VARIANT)))))
+    rows = []
+    for name, other in pairs:
+        diff, lo, hi = paired_bootstrap(ap[best].values, ap[other].values)
+        rows.append({"сравнение": name, "выбранный": " / ".join(best), "другой": " / ".join(other),
+                     "разница_mAP": diff, "ci_2.5": lo, "ci_97.5": hi, "ноль_в_интервале": bool(lo <= 0 <= hi)})
+    return pd.DataFrame(rows)
+
+
 def select_on_train(model, processor):
     frames = data.load_frames("train_sub")
     qs = queries.load_queries()
     variants = [(m, t, s) for m in available_modes() for t in prompts.TEMPLATES for s in SCORINGS]
     per_query = run_variants(frames, qs, variants, model, processor)
     per_query.to_csv(config.RESULTS / "zs_train_sub_per_query.csv", index=False)
-    table = summary(per_query, ["mode", "template", "scoring"]).sort_values("ap", ascending=False)
+    table = summary(per_query, VARIANT).sort_values("ap", ascending=False)
     table.to_csv(config.RESULTS / "zs_train_sub_variants.csv")
     best = table.index[0]
     CHOICE_PATH.write_text(json.dumps(dict(zip(["mode", "template", "scoring"], best)), indent=1))
+    boot = bootstrap_comparisons(per_query, table)
+    boot.to_csv(config.RESULTS / "zs_train_sub_bootstrap.csv", index=False)
     print(table[["n_queries"] + METRIC_COLS].round(4).to_string())
     print("выбран:", best)
+    print(boot.round(4).to_string())
 
 
 def final_on_eval(model, processor):

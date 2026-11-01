@@ -58,3 +58,38 @@ def test_per_attr_scoring_sums_log_probs():
     s = evaluate.score_matrix(img, q2, "sentence", "per_attr", text_emb)
     assert np.allclose(s[:, 0], s[:, 1] + s[:, 2], atol=1e-4)
     assert (s <= 0).all()
+
+
+def test_paired_bootstrap_identical_and_shifted():
+    rng = np.random.default_rng(1)
+    a = rng.random(40)
+    assert evaluate.paired_bootstrap(a, a, n_boot=500) == (0.0, 0.0, 0.0)
+    diff, lo, hi = evaluate.paired_bootstrap(a + 0.1, a, n_boot=500)
+    assert diff == pytest.approx(0.1) and lo == pytest.approx(0.1) and hi == pytest.approx(0.1)
+
+
+def test_paired_bootstrap_interval_covers_mean():
+    rng = np.random.default_rng(2)
+    a, b = rng.random(86), rng.random(86)
+    diff, lo, hi = evaluate.paired_bootstrap(a, b, n_boot=2000)
+    assert lo < diff < hi
+
+
+def test_bootstrap_comparisons_change_one_factor():
+    rng = np.random.default_rng(3)
+    rows = []
+    for mode in ["crop", "pad"]:
+        for template in ["tags", "sentence", "dashcam"]:
+            for scoring in ["joint", "per_attr"]:
+                for q in range(10):
+                    rows.append({"query_id": q, "mode": mode, "template": template, "scoring": scoring, "ap": rng.random()})
+    pq = pd.DataFrame(rows)
+    table = pq.groupby(evaluate.VARIANT).ap.mean().sort_values(ascending=False).to_frame()
+    boot = evaluate.bootstrap_comparisons(pq, table)
+    # второй вариант + 1 смена crop/pad + 2 других шаблона + 1 другой скоринг
+    assert boot["сравнение"].tolist() == ["1-й против 2-го", "mode", "template", "template", "scoring"]
+    best = " / ".join(table.index[0])
+    assert (boot["выбранный"] == best).all()
+    for _, r in boot.iloc[1:].iterrows():
+        diff_parts = sum(x != y for x, y in zip(r["выбранный"].split(" / "), r["другой"].split(" / ")))
+        assert diff_parts == 1
