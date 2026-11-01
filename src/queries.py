@@ -79,6 +79,17 @@ def select(counts: pd.DataFrame, min_relevant: int = config.MIN_RELEVANT) -> pd.
     return counts[keep].reset_index(drop=True)
 
 
+THRESHOLDS = (1, 10, 20, 30, 50, 100, 200)
+
+
+def threshold_table(counts: pd.DataFrame, thresholds=THRESHOLDS) -> pd.DataFrame:
+    rows = []
+    for t in thresholds:
+        n = select(counts, t).n_attrs.value_counts()
+        rows.append({"порог": t, **{f"{k}_атр": int(n.get(k, 0)) for k in (1, 2, 3)}, "всего": int(n.sum())})
+    return pd.DataFrame(rows).set_index("порог")
+
+
 def load_queries() -> pd.DataFrame:
     return pd.read_parquet(config.QUERIES_PATH)
 
@@ -86,6 +97,7 @@ def load_queries() -> pd.DataFrame:
 def main():
     counts = count_both(data.load_frames())
     counts.to_csv(config.RESULTS / "query_counts.csv", index=False)
+    threshold_table(counts).to_csv(config.RESULTS / "threshold_counts.csv")
     chosen = select(counts)
     chosen.to_parquet(config.QUERIES_PATH, index=False)
     print(chosen.groupby("n_attrs").size().to_string())
