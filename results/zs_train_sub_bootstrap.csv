@@ -1,0 +1,6 @@
+сравнение,выбранный,другой,разница_mAP,ci_2.5,ci_97.5,ноль_в_интервале
+1-й против 2-го,crop / sentence / per_attr,crop / dashcam / per_attr,0.006127425696742588,-0.0016674401589861219,0.014059006368054953,True
+mode,crop / sentence / per_attr,pad / sentence / per_attr,0.00859423488524061,0.0021225388056210184,0.014942987409976155,False
+template,crop / sentence / per_attr,crop / dashcam / per_attr,0.006127425696742588,-0.0016674401589861219,0.014059006368054953,True
+template,crop / sentence / per_attr,crop / tags / per_attr,0.04199001420539949,0.025671129705179246,0.05833488920822623,False
+scoring,crop / sentence / per_attr,crop / sentence / joint,0.09015436713826297,0.07255395880218192,0.10764985854843141,False

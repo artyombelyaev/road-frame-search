@@ -1,0 +1,5 @@
+{
+ "mode": "crop",
+ "template": "sentence",
+ "scoring": "per_attr"
+}
