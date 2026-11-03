@@ -47,6 +47,9 @@ def test_miss_shares():
     # в топ-5 все пять кадров галереи: погода не совпала у 2 и 4, время - у 4 и 5
     assert res.miss_weather == pytest.approx(2 / 5)
     assert res.miss_timeofday == pytest.approx(2 / 5)
+    # у случайной выдачи доля считается по всей галерее запроса - здесь те же 5 кадров
+    assert res.rand_miss_weather == pytest.approx(2 / 5)
+    assert np.isnan(res.rand_miss_scene)
 
 
 def test_per_attr_scoring_sums_log_probs():
